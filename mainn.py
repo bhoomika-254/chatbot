@@ -14,7 +14,7 @@ from datetime import datetime
 # Load environment variables
 
 load_dotenv()
-GOOGLE_API_KEY="AIzaSyB63KrNg5NKh139r9ghHaKp8mTgY4eZ4kU"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 PDF_PATH = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\PavanAI.pdf"
 GOOGLE_CREDENTIALS_PATH = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\chatbot-service-account-442504-6c01ffe9905f.json"
 
