@@ -28,8 +28,8 @@ st.set_page_config(
 # Load environment variables
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-PDF_PATH = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\PavanAI.pdf"
-GOOGLE_CREDENTIALS_PATH = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\chatbot-service-account-442504-6c01ffe9905f.json"
+PDF_PATH = "PavanAI.pdf"
+GOOGLE_CREDENTIALS_PATH = "chatbot-service-account-442504-6c01ffe9905f.json"
 
 # Validate Google API Key and Credentials Path
 if not GOOGLE_API_KEY or not os.path.exists(GOOGLE_CREDENTIALS_PATH):
