@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 
 # Improved UI
-favicon_path = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\favicon.ico"
+favicon_path = "favicon.ico"
 favicon_bytes = None
 if os.path.exists(favicon_path):
     with open(favicon_path, "rb") as f:
