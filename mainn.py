@@ -11,7 +11,12 @@ from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 from datetime import datetime
 
-# Load environment variables
+# Improved UI
+favicon_path = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\favicon.ico"
+favicon_bytes = None
+if os.path.exists(favicon_path):
+    with open(favicon_path, "rb") as f:
+        favicon_bytes = f.read()
 
 st.set_page_config(
     page_title="Pavan AI",
@@ -20,6 +25,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+# Load environment variables
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 PDF_PATH = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\PavanAI.pdf"
@@ -86,13 +92,6 @@ def response_generator(user_question):
     response = user_input_handler(user_question)
     for word in response.split():
         yield word + " "
-
-# Improved UI
-favicon_path = r"C:\Users\bhoom\OneDrive\Desktop\isro project\chatbot\Gemini_API_Chatbot_using_streamlit\favicon.ico"
-favicon_bytes = None
-if os.path.exists(favicon_path):
-    with open(favicon_path, "rb") as f:
-        favicon_bytes = f.read()
 
 # CSS Styling for background and chat bubble aesthetics
 st.markdown("""
